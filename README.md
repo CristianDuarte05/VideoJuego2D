@@ -1,4 +1,4 @@
-# ⚔️ Proyecto Unity -- Shooter Plataformero 2D
+# ⚔️ Proyecto Unity -- Shooter Plataforma 2D
 
 Juego 2D desarrollado en Unity (versión 6000.2.10f1) donde controlas a
 un personaje que debe eliminar soldados enemigos, evitar caer al abismo
