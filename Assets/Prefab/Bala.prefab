@@ -192,4 +192,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bala
   velocidad: 1
-  Sonido: {fileID: 8300000, guid: 8fe46b7da8f1ed946ac021e5afc8bf71, type: 3}
+  Sonido: {fileID: 8300000, guid: 5755ff130d865844fb91de005f5503b6, type: 3}

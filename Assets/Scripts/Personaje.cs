@@ -5,18 +5,21 @@ public class Personaje : MonoBehaviour
     public float Speed = 5f;
     public float JumpForce = 5f;
     public GameObject BalaPrefab;
+    public AudioClip Salto;
 
     private Rigidbody2D rb;
     private Animator animator;
     private float horizontal;
     private bool Piso;
     private float UltimoDisparo;
+    private AudioSource audioSource;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         rb.WakeUp();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -35,6 +38,11 @@ public class Personaje : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) && Piso)
         {
             rb.AddForce(Vector2.up * JumpForce);
+
+            if (Salto != null)
+            {
+                audioSource.PlayOneShot(Salto);
+            }
         }
 
         if (Input.GetKey(KeyCode.Space) && Time.time > UltimoDisparo + 0.25f)
