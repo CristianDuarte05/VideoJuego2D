@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CamaraScript
   Personaje: {fileID: 2268716}
   minX: -2.5
-  maxX: 25
+  maxX: 4.45
 --- !u!82 &519420034
 AudioSource:
   m_ObjectHideFlags: 0
