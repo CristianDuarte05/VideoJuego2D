@@ -26,12 +26,13 @@ es destruir 10 soldados para ganar la partida.
 
 ## 🕹️ Controles
 
-  Acción                          Tecla
-  ------------------------------- -------------
-  Moverse                         A / D o ← →
-  Saltar                          W
-  Disparar                        SPACE
-  Reiniciar (en pantalla final)   Botón UI
+| Acción                        | Tecla           |
+|------------------------------|------------------|
+| Moverse                      | A / D o ← →      |
+| Saltar                       | W                |
+| Disparar                     | SPACE            |
+| Reiniciar (pantalla final)   | Botón UI         |
+
 
 ## 📌 Estructura de Scripts
 
