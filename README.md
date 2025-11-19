@@ -75,7 +75,7 @@ Sigue al personaje con límites configurables.
 
 1.  Clonar el repositorio:
 
-        git clone https://github.com/tuusuario/tu-repo.git
+        git clone https://github.com/CristianDuarte05/VideoJuego2D.git
 
 2.  Abrir el proyecto en Unity Hub.
 
