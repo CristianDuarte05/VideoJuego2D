@@ -21,17 +21,16 @@ public class Spawner : MonoBehaviour
 
     void SpawnSoldado()
     {
-        // Posición aleatoria entre minPos y maxPos
+        
         float x = Random.Range(minPos.x, maxPos.x);
         float y = Random.Range(minPos.y, maxPos.y);
         Vector2 spawnPos = new Vector2(x, y);
 
-        // Crear soldado
+        
         GameObject s = Instantiate(SoldadoPrefab, spawnPos, Quaternion.identity);
 
-        // ASIGNAR player al soldado recién creado
         s.GetComponent<SoldadoScript>().player = player;
 
-        // También puedes asignar BalaPrefab si lo necesitas
+       
     }
 }

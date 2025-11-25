@@ -33,7 +33,8 @@ public class Personaje : MonoBehaviour
 
         Debug.DrawRay(transform.position, Vector3.down * 0.1f, Color.red);
 
-        Piso = Physics2D.Raycast(transform.position, Vector2.down, 0.1f);
+        Piso = Physics2D.Raycast(transform.position + Vector3.down * 0.2f, Vector2.down, 0.3f);
+
 
         if (Input.GetKeyDown(KeyCode.W) && Piso)
         {
@@ -56,7 +57,6 @@ public class Personaje : MonoBehaviour
             GameManager.Instancia.FinDelJuego(false);
         }
 
-        Debug.Log("Piso = " + Piso);
     }
 
     private void Disparo()

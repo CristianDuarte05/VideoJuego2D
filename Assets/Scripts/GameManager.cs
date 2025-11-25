@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instancia;
 
     public int VidaPersonaje = 10;
     public int SoldadosMuertos = 0;
+
+    private bool juegoTerminado = false;   
 
     private void Awake()
     {
@@ -21,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     public void RestarVida(int cantidad)
     {
+        if (juegoTerminado) return;   
+
         VidaPersonaje -= cantidad;
 
         UIControllerTMP.Instancia.ActualizarUI();
@@ -33,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     public void SoldadoEliminado()
     {
+        if (juegoTerminado) return;   
+
         SoldadosMuertos++;
 
         UIControllerTMP.Instancia.ActualizarUI();
@@ -45,6 +50,9 @@ public class GameManager : MonoBehaviour
 
     public void FinDelJuego(bool victoria)
     {
+        if (juegoTerminado) return;   
+        juegoTerminado = true;      
+
         Time.timeScale = 0f;
 
         if (victoria)
@@ -53,15 +61,11 @@ public class GameManager : MonoBehaviour
             UIControllerTMP.Instancia.MostrarMensaje("PERDISTE :(");
 
         UIControllerTMP.Instancia.MostrarBotonReiniciar();
-
-
     }
 
     public void ReiniciarJuego()
     {
         Time.timeScale = 1f;
-        Debug.Log("timeScale = " + Time.timeScale);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
 }
